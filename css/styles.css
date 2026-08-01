@@ -358,6 +358,11 @@ a, button { cursor: pointer; }
 @media (min-width: 860px) {
   .statement-grid { grid-template-columns: 1.3fr 1fr; gap: var(--space-16); }
 }
+.statement-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
 .statement-title {
   font-size: var(--fs-statement);
   line-height: 1.12;
