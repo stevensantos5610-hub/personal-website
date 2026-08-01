@@ -509,6 +509,15 @@ a, button { cursor: pointer; }
   background: var(--color-accent-green);
 }
 
+.exp-focus-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: var(--space-6) 0 var(--space-3);
+}
+
 /* ---------- Testimonial ---------- */
 .testimonial {
   padding-block: var(--space-16);
