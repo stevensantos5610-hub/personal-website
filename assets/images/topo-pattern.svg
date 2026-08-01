@@ -1,0 +1,10 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.4">
+  <!-- Topographic contour lines — subtle recurring texture motif -->
+  <path d="M-20,60 C120,20 220,100 360,50 C480,10 600,90 820,40" opacity="0.5" />
+  <path d="M-20,110 C120,70 220,150 360,100 C480,60 600,140 820,90" opacity="0.45" />
+  <path d="M-20,160 C120,120 220,200 360,150 C480,110 600,190 820,140" opacity="0.4" />
+  <path d="M-20,210 C120,170 220,250 360,200 C480,160 600,240 820,190" opacity="0.35" />
+  <path d="M-20,260 C120,220 220,300 360,250 C480,210 600,290 820,240" opacity="0.3" />
+  <path d="M-20,310 C120,270 220,350 360,300 C480,260 600,340 820,290" opacity="0.25" />
+  <path d="M-20,360 C120,320 220,400 360,350 C480,310 600,390 820,340" opacity="0.2" />
+</svg>
