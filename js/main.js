@@ -58,6 +58,30 @@
     });
   });
 
+  // Résumé preview modal
+  const resumeOpenBtn = document.getElementById('resumeOpenBtn');
+  const resumeModal = document.getElementById('resumeModal');
+  const resumeFrame = document.getElementById('resumeFrame');
+  const RESUME_SRC = 'assets/resume/Steven_Santos_Resume.pdf';
+  if (resumeOpenBtn && resumeModal && resumeFrame) {
+    const openResume = () => {
+      if (!resumeFrame.src) resumeFrame.src = RESUME_SRC;
+      resumeModal.hidden = false;
+      document.body.style.overflow = 'hidden';
+    };
+    const closeResume = () => {
+      resumeModal.hidden = true;
+      document.body.style.overflow = '';
+    };
+    resumeOpenBtn.addEventListener('click', openResume);
+    resumeModal.querySelectorAll('[data-close]').forEach((el) => {
+      el.addEventListener('click', closeResume);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !resumeModal.hidden) closeResume();
+    });
+  }
+
   // Scroll-reveal for elements marked .reveal
   const revealEls = document.querySelectorAll('.reveal');
 

@@ -680,6 +680,69 @@ a, button { cursor: pointer; }
 .contact-links { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); margin-bottom: var(--space-8); }
 .social-links { display: flex; gap: var(--space-8); justify-content: center; }
 
+/* ---------- Resume modal ---------- */
+.resume-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+.resume-modal[hidden] { display: none; }
+.resume-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 14, 32, 0.72);
+}
+.resume-modal-panel {
+  position: relative;
+  width: min(900px, 100%);
+  height: min(85vh, 1100px);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(6, 14, 32, 0.35);
+}
+.resume-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+.resume-modal-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.resume-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.resume-modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+.resume-modal-close:hover { background: var(--color-bg); border-color: var(--color-primary); }
+.resume-modal-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--color-bg); border-top: 1px solid var(--color-border); padding-block: var(--space-8); }
 .footer-inner {

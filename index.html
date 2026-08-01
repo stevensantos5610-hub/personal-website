@@ -31,7 +31,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <a href="assets/resume/Steven_Santos_Resume.pdf" class="btn btn-solid-accent nav-cta" target="_blank" rel="noopener">Résumé</a>
+  <button class="btn btn-solid-accent nav-cta" id="resumeOpenBtn" type="button">Résumé</button>
 </header>
 
 <main>
@@ -431,6 +431,22 @@
     <p class="footer-copy">&copy; <span id="year"></span> Steven Santos</p>
   </div>
 </footer>
+
+<div class="resume-modal" id="resumeModal" hidden>
+  <div class="resume-modal-backdrop" data-close></div>
+  <div class="resume-modal-panel" role="dialog" aria-modal="true" aria-label="Steven Santos résumé preview">
+    <div class="resume-modal-header">
+      <span class="resume-modal-title">Résumé</span>
+      <div class="resume-modal-actions">
+        <a href="assets/resume/Steven_Santos_Resume.pdf" download class="btn btn-solid-accent">Download</a>
+        <button class="resume-modal-close" data-close type="button" aria-label="Close résumé preview">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <iframe class="resume-modal-frame" id="resumeFrame" title="Steven Santos résumé"></iframe>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>
