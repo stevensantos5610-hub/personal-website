@@ -48,6 +48,16 @@
     galleryNext.addEventListener('click', () => scrollByCard(1));
   }
 
+  // Fullscreen buttons on photos in the "Some of our work" gallery
+  document.querySelectorAll('.fullscreen-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const img = btn.previousElementSibling;
+      if (img && img.requestFullscreen) {
+        img.requestFullscreen().catch(() => {});
+      }
+    });
+  });
+
   // Scroll-reveal for elements marked .reveal
   const revealEls = document.querySelectorAll('.reveal');
 
