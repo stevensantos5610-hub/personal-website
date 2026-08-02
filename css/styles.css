@@ -274,9 +274,11 @@ a, button { cursor: pointer; }
 }
 
 .nav-cta { display: none; }
-@media (min-width: 640px) {
+@media (min-width: 860px) {
   .nav-cta { display: inline-flex; }
 }
+
+.nav-cta-mobile { display: none; }
 
 @media (max-width: 859px) {
   .nav-links {
@@ -298,6 +300,7 @@ a, button { cursor: pointer; }
   }
   .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .nav-links a { color: var(--color-text); }
+  .nav-cta-mobile { display: inline-flex; margin-top: var(--space-2); }
 }
 
 /* ---------- Hero ---------- */

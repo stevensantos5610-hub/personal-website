@@ -83,10 +83,11 @@
 
   // Résumé preview modal
   const resumeOpenBtn = document.getElementById('resumeOpenBtn');
+  const resumeOpenBtnMobile = document.getElementById('resumeOpenBtnMobile');
   const resumeModal = document.getElementById('resumeModal');
   const resumeFrame = document.getElementById('resumeFrame');
   const RESUME_SRC = 'assets/resume/Steven_Santos_Resume.pdf';
-  if (resumeOpenBtn && resumeModal && resumeFrame) {
+  if (resumeModal && resumeFrame && (resumeOpenBtn || resumeOpenBtnMobile)) {
     const openResume = () => {
       if (!resumeFrame.src) resumeFrame.src = RESUME_SRC;
       resumeModal.hidden = false;
@@ -96,7 +97,16 @@
       resumeModal.hidden = true;
       document.body.style.overflow = '';
     };
-    resumeOpenBtn.addEventListener('click', openResume);
+    if (resumeOpenBtn) resumeOpenBtn.addEventListener('click', openResume);
+    if (resumeOpenBtnMobile) {
+      resumeOpenBtnMobile.addEventListener('click', () => {
+        if (navLinks && navToggle) {
+          navLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+        openResume();
+      });
+    }
     resumeModal.querySelectorAll('[data-close]').forEach((el) => {
       el.addEventListener('click', closeResume);
     });
