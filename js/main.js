@@ -48,15 +48,38 @@
     galleryNext.addEventListener('click', () => scrollByCard(1));
   }
 
-  // Fullscreen buttons on photos in the "Some of our work" gallery
-  document.querySelectorAll('.fullscreen-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const img = btn.previousElementSibling;
-      if (img && img.requestFullscreen) {
-        img.requestFullscreen().catch(() => {});
-      }
+  // Fullscreen buttons on photos in the "Some of our work" gallery.
+  // Uses a custom lightbox rather than the Fullscreen API — iOS Safari
+  // doesn't support requestFullscreen() on <img> elements (only <video>),
+  // so a lightbox is the only approach that works consistently on both
+  // desktop and mobile.
+  const photoLightbox = document.getElementById('photoLightbox');
+  const photoLightboxImg = document.getElementById('photoLightboxImg');
+  if (photoLightbox && photoLightboxImg) {
+    const openLightbox = (img) => {
+      photoLightboxImg.src = img.src;
+      photoLightboxImg.alt = img.alt;
+      photoLightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    };
+    const closeLightbox = () => {
+      photoLightbox.hidden = true;
+      document.body.style.overflow = '';
+      photoLightboxImg.src = '';
+    };
+    document.querySelectorAll('.fullscreen-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const img = btn.previousElementSibling;
+        if (img) openLightbox(img);
+      });
     });
-  });
+    photoLightbox.querySelectorAll('[data-close]').forEach((el) => {
+      el.addEventListener('click', closeLightbox);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !photoLightbox.hidden) closeLightbox();
+    });
+  }
 
   // Résumé preview modal
   const resumeOpenBtn = document.getElementById('resumeOpenBtn');
