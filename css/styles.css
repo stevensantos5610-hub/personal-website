@@ -327,11 +327,24 @@ a, button { cursor: pointer; }
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 28px;
   padding: var(--space-4);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+.hero-box-outer:hover,
+.hero-box-outer:focus-visible {
+  transform: scale(1.04);
+  border-color: rgba(255, 255, 255, 0.55);
 }
 .hero-box-inner {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   padding: var(--space-8) var(--space-12);
+  transition: border-color var(--transition-base);
+}
+.hero-box-outer:hover .hero-box-inner,
+.hero-box-outer:focus-visible .hero-box-inner {
+  border-color: rgba(255, 255, 255, 0.85);
 }
 @media (min-width: 640px) {
   .hero-box-outer { border-radius: 36px; padding: var(--space-6); }
