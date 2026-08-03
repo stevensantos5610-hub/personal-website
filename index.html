@@ -13,6 +13,20 @@
 </head>
 <body>
 
+<div class="travel-bird" id="travelBird" aria-hidden="true">
+  <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+    <g class="travel-bird-anim">
+      <path class="travel-bird-wing" d="M15 18 C 11 12, 3 10, -2 14 C 2 18, 9 20, 15 18 Z" />
+      <ellipse cx="17" cy="20" rx="9" ry="5.5" />
+      <path d="M9 19 L1.5 14 L2.5 23.5 Z" />
+      <g class="travel-bird-head">
+        <circle cx="26" cy="15" r="3.6" />
+        <path d="M29 14.6 L34.5 13.2 L29 16.8 Z" />
+      </g>
+    </g>
+  </svg>
+</div>
+
 <header class="site-nav" id="top">
   <a class="brand" href="#top" aria-label="Steven Santos home">
     <img src="assets/images/torogoz-mark.svg" alt="" class="brand-mark" width="26" height="26" />
@@ -41,6 +55,17 @@
   <section class="hero" id="hero">
     <img class="hero-bg" src="assets/images/hero.jpg" alt="Lake Coatepeque, El Salvador" />
     <div class="hero-overlay"></div>
+    <div class="hero-bird-wrap" id="heroBird" aria-hidden="true">
+      <div class="hero-bird-inner">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+          <path class="hero-bird-wing" d="M18 17 C 13 9, 2 6, -4 12 C 1 17, 10 20, 18 17 Z" />
+          <ellipse cx="17" cy="20" rx="9" ry="5.5" />
+          <circle cx="26" cy="15" r="3.6" />
+          <path d="M29 14.6 L34.5 13.2 L29 16.8 Z" />
+          <path d="M9 19 L1.5 14 L2.5 23.5 Z" />
+        </svg>
+      </div>
+    </div>
     <div class="hero-content reveal">
       <p class="hero-greeting">Hi, my name is</p>
       <a href="#story" class="hero-box-outer" aria-label="Scroll to next section">
@@ -49,6 +74,7 @@
           <p class="hero-tagline">Boston, MA</p>
         </div>
       </a>
+      <div class="hero-ring" id="heroRing" aria-hidden="true"></div>
     </div>
     <a href="#story" class="scroll-cue" aria-label="Scroll to explore">
       <span>Discover more</span>
@@ -58,6 +84,22 @@
 
   <!-- INTRO STATEMENT -->
   <section class="statement" id="story">
+    <div class="section-branch" id="branch-story" aria-hidden="true">
+      <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <path d="M4 92 C 45 80, 95 58, 138 34" stroke="#4A3324" stroke-width="12" stroke-linecap="round" />
+        <path d="M6 88 C 46 76, 94 55, 134 32" stroke="#8A6748" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+        <path d="M72 66 l 15 -19" stroke="#4A3324" stroke-width="6" stroke-linecap="round" />
+        <path d="M73.5 64 l 12.5 -16" stroke="#8A6748" stroke-width="2.2" stroke-linecap="round" opacity="0.6" />
+        <path d="M18 92 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M42 82 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M66 70 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M92 57 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M116 45 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path class="section-branch-leaf" d="M26 84 C 20 76, 10 76, 6 84 C 10 92, 20 92, 26 84 Z" fill="#3E6B4A" />
+        <path class="section-branch-leaf" d="M58 72 C 52 64, 42 64, 38 72 C 42 80, 52 80, 58 72 Z" fill="#3E6B4A" />
+        <path class="section-branch-leaf" d="M92 52 L 102 36 L 112 50 Z" fill="#3E6B4A" />
+      </svg>
+    </div>
     <div class="section-inner statement-grid">
       <div class="reveal">
         <p class="section-eyebrow">Computer Science Student &middot; Systems &amp; Operations</p>
@@ -85,12 +127,39 @@
 
   <!-- ABOUT -->
   <section class="section about" id="about">
+    <div class="section-branch" id="branch-about" aria-hidden="true">
+      <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <path d="M4 92 C 45 80, 95 58, 138 34" stroke="#4A3324" stroke-width="12" stroke-linecap="round" />
+        <path d="M6 88 C 46 76, 94 55, 134 32" stroke="#8A6748" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+        <path d="M72 66 l 15 -19" stroke="#4A3324" stroke-width="6" stroke-linecap="round" />
+        <path d="M73.5 64 l 12.5 -16" stroke="#8A6748" stroke-width="2.2" stroke-linecap="round" opacity="0.6" />
+        <path d="M18 92 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M42 82 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M66 70 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M92 57 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path d="M116 45 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+        <path class="section-branch-leaf" d="M26 84 C 20 76, 10 76, 6 84 C 10 92, 20 92, 26 84 Z" fill="#3E6B4A" />
+        <path class="section-branch-leaf" d="M58 72 C 52 64, 42 64, 38 72 C 42 80, 52 80, 58 72 Z" fill="#3E6B4A" />
+        <path class="section-branch-leaf" d="M92 52 L 102 36 L 112 50 Z" fill="#3E6B4A" />
+      </svg>
+    </div>
     <div class="section-inner about-grid">
-      <div class="about-photo reveal">
+      <div class="about-photo reveal" id="about-top">
         <div class="photo-frame">
           <img src="assets/images/flag.svg" alt="Flag of El Salvador" class="photo-flag" />
         </div>
         <p class="photo-hint">El Salvador, where my roots are</p>
+        <div class="inline-branch" id="branch-about-top" aria-hidden="true">
+          <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M4 92 C 45 80, 95 58, 138 34" stroke="#4A3324" stroke-width="12" stroke-linecap="round" />
+            <path d="M6 88 C 46 76, 94 55, 134 32" stroke="#8A6748" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+            <path d="M18 92 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+            <path d="M42 82 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+            <path d="M66 70 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+            <path class="section-branch-leaf" d="M26 84 C 20 76, 10 76, 6 84 C 10 92, 20 92, 26 84 Z" fill="#3E6B4A" />
+            <path class="section-branch-leaf" d="M58 72 C 52 64, 42 64, 38 72 C 42 80, 52 80, 58 72 Z" fill="#3E6B4A" />
+          </svg>
+        </div>
       </div>
 
       <div class="about-copy reveal">
@@ -154,7 +223,7 @@
       <h2 class="section-title">Where I've worked.</h2>
 
       <div class="exp-list">
-        <article class="exp-item reveal">
+        <article class="exp-item reveal" id="exp-abcd">
           <div class="exp-header">
             <div>
               <h3>Administrative Operations Intern</h3>
@@ -175,9 +244,20 @@
             <li>Streamlined end-user provisioning and accelerated IT service delivery by re-engineering hardware asset workflows and documenting Identity &amp; Access Management (IAM) pipelines.</li>
             <li>Presented operational workflows and project deliverables during executive meetings, directly showcasing strategic business improvements to department heads and the Vice President.</li>
           </ul>
+          <div class="exp-branch" id="exp-branch-abcd" aria-hidden="true">
+            <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M4 92 C 45 80, 95 58, 138 34" stroke="#4A3324" stroke-width="12" stroke-linecap="round" />
+              <path d="M6 88 C 46 76, 94 55, 134 32" stroke="#8A6748" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+              <path d="M18 92 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path d="M42 82 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path d="M66 70 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path class="section-branch-leaf" d="M26 84 C 20 76, 10 76, 6 84 C 10 92, 20 92, 26 84 Z" fill="#3E6B4A" />
+              <path class="section-branch-leaf" d="M58 72 C 52 64, 42 64, 38 72 C 42 80, 52 80, 58 72 Z" fill="#3E6B4A" />
+            </svg>
+          </div>
         </article>
 
-        <article class="exp-item reveal">
+        <article class="exp-item reveal" id="exp-hardwood">
           <div class="exp-header">
             <div>
               <h3>Operations Assistant</h3>
@@ -196,9 +276,20 @@
             <li>Guaranteed regulatory compliance by tracking and organizing 30+ building permit applications for accurate submission and project milestone delivery.</li>
             <li>Accelerated issue resolution by communicating directly with external stakeholders to gather, verify, and clarify critical business information.</li>
           </ul>
+          <div class="exp-branch" id="exp-branch-hardwood" aria-hidden="true">
+            <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M4 92 C 45 80, 95 58, 138 34" stroke="#4A3324" stroke-width="12" stroke-linecap="round" />
+              <path d="M6 88 C 46 76, 94 55, 134 32" stroke="#8A6748" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+              <path d="M18 92 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path d="M42 82 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path d="M66 70 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path class="section-branch-leaf" d="M26 84 C 20 76, 10 76, 6 84 C 10 92, 20 92, 26 84 Z" fill="#3E6B4A" />
+              <path class="section-branch-leaf" d="M58 72 C 52 64, 42 64, 38 72 C 42 80, 52 80, 58 72 Z" fill="#3E6B4A" />
+            </svg>
+          </div>
         </article>
 
-        <article class="exp-item reveal">
+        <article class="exp-item reveal" id="exp-digitalready">
           <div class="exp-header">
             <div>
               <h3>Computer Science Tech Apprentice</h3>
@@ -216,6 +307,17 @@
             <li>Explored different pathways in tech, from coding to core IT topics, through a hands-on summer apprenticeship.</li>
             <li>Built projects in Python alongside other team members, picking up foundational programming concepts along the way.</li>
           </ul>
+          <div class="exp-branch" id="exp-branch-digitalready" aria-hidden="true">
+            <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M4 92 C 45 80, 95 58, 138 34" stroke="#4A3324" stroke-width="12" stroke-linecap="round" />
+              <path d="M6 88 C 46 76, 94 55, 134 32" stroke="#8A6748" stroke-width="4" stroke-linecap="round" opacity="0.65" />
+              <path d="M18 92 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path d="M42 82 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path d="M66 70 l 6 -7" stroke="#3A2717" stroke-width="2" stroke-linecap="round" />
+              <path class="section-branch-leaf" d="M26 84 C 20 76, 10 76, 6 84 C 10 92, 20 92, 26 84 Z" fill="#3E6B4A" />
+              <path class="section-branch-leaf" d="M58 72 C 52 64, 42 64, 38 72 C 42 80, 52 80, 58 72 Z" fill="#3E6B4A" />
+            </svg>
+          </div>
         </article>
       </div>
     </div>
