@@ -24,7 +24,7 @@ Then preview at `http://localhost:8420`. **Known gotcha:** this server sends no 
 - `js/main.js` — single IIFE, one concern per named block (nav toggle, scroll-reveal, gallery arrows, modals, etc.)
 - `assets/images/` — photos + custom SVGs (brand mark, hero background, decorative patterns)
 - `assets/video/` — two muted, controls-enabled `<video>` clips
-- `assets/resume/Steven_Santos_Resume.pdf` — served via the résumé preview modal (not a direct download link)
+- `assets/resume/Steven_Santos_Resume.pdf` — kept in the repo but no longer linked from the site; the résumé button/modal were removed since the user now tailors a resume per job application instead of hosting one static version
 
 ## Design system
 
@@ -32,14 +32,14 @@ Then preview at `http://localhost:8420`. **Known gotcha:** this server sends no 
 - **Typography:** Fraunces (display/serif, used italic for the hero name) + Inter (body/UI).
 - **Layout language:** editorial/magazine style inspired by iasoglobal.com — asymmetric grids, hairline rules, uppercase tracked-out kickers, arrow-links (`.link-arrow`) instead of heavy buttons for secondary actions, tall serif statement headlines. Not the original cinematic-scroll-story direction (logartis.info) — that was superseded early on.
 - **Brand mark:** `torogoz-mark.svg`, a simplified line-art take on the Torogoz (El Salvador's national bird) — used as the logomark/favicon.
-- **Reusable patterns:** `.link-arrow` (text link + arrow SVG, color-transition hover), `.tag`/`.tag-list` (pill chips), `.exp-item`/`.exp-summary` (experience entries with an italic intro line + bullet list), `.media-item`/`.fullscreen-btn` (photo grid items with lightbox trigger), modal pattern (`hidden` attribute + `[data-close]` delegated close handlers + Escape key — see `resumeModal` and `photoLightbox` in main.js for the template if adding another modal).
+- **Reusable patterns:** `.link-arrow` (text link + arrow SVG, color-transition hover), `.tag`/`.tag-list` (pill chips), `.exp-item`/`.exp-summary` (experience entries with an italic intro line + bullet list), `.media-item`/`.fullscreen-btn` (photo grid items with lightbox trigger), modal pattern (`hidden` attribute + `[data-close]` delegated close handlers + Escape key — see `photoLightbox` in main.js for the template if adding another modal).
 
 ## Content facts (avoid re-asking the user for these)
 
 - Contact: Steven.Santos5610@gmail.com · +1 (857) 272-7314 · Boston, MA
 - LinkedIn: linkedin.com/in/steven-santos-8b6182276
 - Handshake: app.joinhandshake.com/profiles/558u2bbw
-- Current role: Administrative Operations Intern, ABCD (Action for Boston Community Development), IT Services — Jun 2026–Present. **Update this when the internship ends** — the user said they'll report the change; shift copy from present tense to past tense and set an end date in `.exp-date`.
+- Past role: Administrative Operations Intern, ABCD (Action for Boston Community Development), IT Services — Jun 2026–Aug 2026 (internship ended). Copy is in past tense, `.exp-date` shows the end date.
 - Other experience: Santos Hardwood Floors and Construction (family business, 20+ years, Everett MA) · Digital Ready tech apprenticeship (Roxbury, MA, Jun–Aug 2023)
 - Credential: ADAGE Grant Certificate (verified badge linked in About section)
 
