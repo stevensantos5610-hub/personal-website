@@ -40,7 +40,7 @@ Then preview at `http://localhost:8420`. **Known gotcha:** this server sends no 
 - LinkedIn: linkedin.com/in/steven-santos-8b6182276
 - Handshake: app.joinhandshake.com/profiles/558u2bbw
 - Newest role (top of Experience): Incoming IT Intern, WinnCompanies, Boston MA — Nov 2026–Present; supports technology implementations, system integrations, and IT asset tracking during property onboarding/offboarding. Intro line says it's a top-10 largest U.S. property management firm; one bullet on the role.
-- Current role: Administrative Operations Intern, ABCD (Action for Boston Community Development), IT Services — Jun 2026–Present (still ongoing as of 2026-09-21; an earlier "internship ended" edit was reverted per the user). **Update this when the internship actually ends** — the user will report the change; shift copy from present tense to past tense and set an end date in `.exp-date`.
+- Past role: Administrative Operations Intern, ABCD (Action for Boston Community Development), IT Services — Jun 2026–Nov 2026, end date given by the user on 2026-11-06. About section copy is in past tense.
 - Other experience: Santos Hardwood Floors and Construction (family business, 20+ years, Everett MA) · Digital Ready tech apprenticeship (Roxbury, MA, Jun–Aug 2023)
 - Credential: ADAGE Grant Certificate (verified badge linked in About section)
 
