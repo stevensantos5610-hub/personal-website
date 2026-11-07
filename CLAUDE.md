@@ -51,4 +51,4 @@ The user explicitly asked to "humanize" the copy at one point — the site had d
 ## Mobile/cross-browser notes
 
 - Photo "fullscreen" uses a custom lightbox modal, **not** the Fullscreen API — iOS Safari doesn't support `requestFullscreen()` on `<img>` elements (only `<video>`), so the raw API silently fails on iPhones. Don't revert this to `element.requestFullscreen()`.
-- Touch targets should stay ≥44×44px (Apple/Google minimum) — this was previously too small (32px) on the photo expand buttons and was corrected.
+- Touch targets should stay ≥44×44px (Apple/Google minimum) — this was previously too small (32px) on the photo expand buttons and was corrected. Text links get this from the `/* Touch targets */` `@media (pointer: coarse)` block at the end of `styles.css`; add new link styles there.

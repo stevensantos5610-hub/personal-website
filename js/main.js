@@ -223,6 +223,9 @@
           flyTimeout = setTimeout(() => {
             travelBird.classList.remove('is-flying');
             takeoffInProgress = false;
+            // Scroll updates are ignored during takeoff, so catch up with
+            // wherever the page ended up (e.g. after a nav link jump).
+            updateActiveSection();
           }, FLIGHT_MS);
         }
       };
@@ -249,7 +252,9 @@
       // gone for the rest of the page, rather than sticking to its last spot.
       const last = sectionEls[sectionEls.length - 1];
       if (refY > last.el.getBoundingClientRect().bottom) return null;
-      return sectionEls[0]; // above the first tracked section — still "hero"
+      // In a gap between tracked sections (e.g. the Experience heading) —
+      // stay with the section above the line instead of treating it as the hero.
+      return sectionEls.filter((s) => s.el.getBoundingClientRect().bottom < refY).pop() || sectionEls[0];
     };
 
     let wasPastHero = false;
@@ -283,7 +288,15 @@
       if (takeoffInProgress) return; // a takeoff/trail/flight is already running — don't fight it
       const match = findCurrentMatch();
 
-      if (!match || match.sectionId === 'hero') {
+      if (!match) {
+        // Stays "past the hero", so scrolling back up resumes from the last
+        // branch rather than re-flying in from the top of the page.
+        travelBird.classList.remove('is-visible');
+        currentSectionId = null;
+        return;
+      }
+
+      if (match.sectionId === 'hero') {
         travelBird.classList.remove('is-visible');
         wasPastHero = false;
         currentSectionId = null;
@@ -298,6 +311,7 @@
         takeoffAndFly(match.branchId);
       } else if (match.sectionId !== currentSectionId) {
         currentSectionId = match.sectionId;
+        travelBird.classList.add('is-visible');
         flyTo(match.branchId, false);
       } else if (!travelBird.classList.contains('is-flying')) {
         // Same section still active and already landed — just keep the bird
@@ -352,6 +366,14 @@
     };
     galleryPrev.addEventListener('click', () => scrollByCard(-1));
     galleryNext.addEventListener('click', () => scrollByCard(1));
+
+    // On wide screens every card fits, so the arrows would do nothing
+    const galleryControls = galleryPrev.parentElement;
+    const syncGalleryControls = () => {
+      galleryControls.hidden = gallery.scrollWidth <= gallery.clientWidth;
+    };
+    window.addEventListener('resize', syncGalleryControls);
+    syncGalleryControls();
   }
 
   // Fullscreen buttons on photos in the "Some of our work" gallery.
