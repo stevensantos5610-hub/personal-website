@@ -127,7 +127,6 @@
   const sectionBranches = [
     ['story', 'branch-story'],
     ['about-top', 'branch-about-top'],
-    ['about', 'branch-about'],
     ['exp-winn', 'exp-branch-winn'],
     ['exp-abcd', 'exp-branch-abcd'],
     ['exp-hardwood', 'exp-branch-hardwood'],
